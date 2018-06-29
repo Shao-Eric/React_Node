@@ -8,11 +8,14 @@
     "npm": "6.1.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run start\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^3.6.0",
     "express": "^4.16.3"
   }
 }
