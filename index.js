@@ -1,9 +1,16 @@
 const express = require('express'); //common js modules
+const mongoose = require('mongoose');
+const keys = require('./config/keys');
+
+require('./services/passport');
+
+mongoose.connect(keys.mongoURI);
+
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send({ bye: 'now' });
-});
+//const authRoutes = require('./routes/authRoutes');
+//authRoutes(app);
+require('./routes/authRoutes')(app);
 
 const PORT = process.env.PORT || 5000;
 
