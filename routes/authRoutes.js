@@ -1,8 +1,5 @@
 const passport = require('passport');
 
-//app.use(passport.initialize());
-// app.use(passport.session());
-
 module.exports = app => {
   //GoogleStrategy identifies itself as google
   app.get(
