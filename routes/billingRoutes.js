@@ -13,6 +13,8 @@ module.exports = app => {
       description: '$5 for 5 credits',
       source: req.body.id
     });
+    //req.body is the parsed json after body parse is wired up
+    //check index.js to see how bodyparser middleware is wired up
     //console.log(charge);
     req.user.credits += 5;
     const user = await req.user.save();
