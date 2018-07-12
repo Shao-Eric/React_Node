@@ -24,8 +24,7 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL:
-        'https://agile-island-74066.herokuapp.com/auth/google/callback',
+      callbackURL: '/auth/google/callback',
       proxy: true
     },
     async (accessToken, refreshToken, profile, done) => {
