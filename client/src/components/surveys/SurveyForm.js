@@ -42,7 +42,8 @@ class SurveyForm extends Component {
 }
 function validate(values) {
   const errors = {};
-  errors.emails = validateEmails(values.emails || '');
+  // recipients are the emails
+  errors.recipients = validateEmails(values.recipients || '');
   _.each(formFields, ({ name }) => {
     if (!values[name]) {
       errors[name] = 'This field cannot be empty!';
