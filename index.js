@@ -21,7 +21,7 @@ app.use(
   cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000,
     keys: [keys.cookieKey]
-    //cookieKey is madeup, we can have multiple random keys
+    //cookieKey is madeup, we can have multiple random keys.
   })
 );
 
